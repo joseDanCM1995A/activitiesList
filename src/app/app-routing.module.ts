@@ -4,8 +4,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+    loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  // { se va a pasar al routing de tabs, para que sea "spa"
+  //   path: 'agregar',
+  //   loadChildren: () => import('./pages/agregar/agregar.module').then( m => m.AgregarPageModule)
+  // }
 ];
 @NgModule({
   imports: [

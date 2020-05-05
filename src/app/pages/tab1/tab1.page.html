@@ -1,0 +1,33 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar color="tertiary">
+        <ion-title>
+            Listas
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <!-- se encuentra en la sección de pendientes -->
+    <app-listas [seccionConcluida]="false"></app-listas>
+    <!-- moviendo la lógica a un componente que se pueda reutilizar para tab1 y tab2 ---- se mueve a listas.component -->
+
+    <!-- <ion-list>
+        <ion-item *ngFor="let lista of deseosService.listas" detail (click)="listaSeleccionada(lista)">
+            <ion-label>{{ lista.titulo }}</ion-label>
+            <ion-note slot="end" color="tertiary"> {{ lista.items.length }} </ion-note>
+        </ion-item>
+    </ion-list> -->
+
+
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="agregarLista()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+
+
+
+</ion-content>
